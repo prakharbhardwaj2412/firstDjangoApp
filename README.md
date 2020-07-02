@@ -1,1 +1,1 @@
-# firstJangoApp
+# firstDjangoApp
