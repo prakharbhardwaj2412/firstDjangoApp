@@ -1,0 +1,40 @@
+{% extends 'register/base.html' %}
+<!-- {{ patient }} -->
+
+{% block title %}Patient Info{% endblock %}
+
+{% block body %}
+
+
+	<div class="container">
+		<h1>Patient Detail</h1>
+		<form>
+		  <div class="form-group">
+		    <label>Patient Id</label>
+		    <input type="text" value="{{ patient.id }}" class="form-control">
+		  </div>
+		  <div class="form-group">
+		    <label>Patient Name</label>
+		    <input type="text" value="{{ patient.PATIENT_NAME }}" class="form-control">
+		  </div>
+		  <div class="form-group">
+		    <label>Email address</label>
+		    <input type="email" class="form-control" value="{{ patient.EMAIL }}">
+		  </div>
+		  <div class="form-group">
+		    <label>Gender</label>
+		    <input type="text" class="form-control" value="{{ patient.GENDER }}">
+		  </div>
+		  <div class="form-group">
+		    <label>DOB</label>
+		    <input type="text" class="form-control" value="{{ patient.DOB }}">
+		  </div>
+		  <div class="form-group">
+		    <label>Contact</label>
+		    <input type="text" class="form-control" value="{{ patient.CONTACT }}">
+		  </div>
+		</form>
+	</div>
+	
+
+{% endblock %}

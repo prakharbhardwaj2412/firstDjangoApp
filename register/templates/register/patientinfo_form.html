@@ -1,0 +1,23 @@
+{% extends 'register/base.html' %}
+{% block title %}Register Patient{% endblock %}
+
+{% block body %}
+
+	<div class="container">
+		<h1>Patient Registration</h1>
+		<form action="" method="post" >
+			{% csrf_token %}
+			{% include 'register/form-template.html' %}
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-success">Submit</button>
+				</div>
+			</div>
+
+
+
+
+
+		</form>
+	</div>
+{% endblock %}

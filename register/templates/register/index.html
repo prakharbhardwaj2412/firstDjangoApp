@@ -1,0 +1,32 @@
+{% extends 'register/base.html' %}
+
+
+{% block body %}
+
+	
+	<h3>Patients List</h3>
+	<ul>
+		{% for patient in all_patients %}
+		<!-- <li><a href="/register/{{ patient.id }}">{{ patient.PATIENT_NAME }}</a></li> -->
+		<li><a href="{% url 'register:detail' patient.id %}">{{ patient.PATIENT_NAME }}</a>
+			<!-- delete -->
+			<form action="{% url 'register:patient-delete' patient.id %}" method="post" style="display: inline;">
+				{% csrf_token %}
+				<input type="hidden" name="patient_id" value="{{ patient.id }}">
+				<button type="submit" class="btn btn-default btn-sm">
+					<span class="glyphicon glyphicon-trash"></span>
+				</button>
+			</form>
+			<!-- update -->
+			<form action="{% url 'register:patient-update' patient.id %}" style="display: inline;">
+				{% csrf_token %}
+				<input type="hidden" name="patient_id" value="{{ patient.id }}">
+				<button type="submit" class="btn btn-default btn-sm">
+					<span class="glyphicon glyphicon-pencil"></span>
+				</button>
+			</form>
+		</li>
+		{% endfor %}
+	</ul>
+	
+{% endblock %}

@@ -1,0 +1,6 @@
+body {
+	/*background-image: url('https://www.fg-a.com/wallpapers/white-stone-1280.jpg');*/
+	background: white url('https://www.fg-a.com/wallpapers/white-stone-1280.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
