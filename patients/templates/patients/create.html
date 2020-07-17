@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patient Create</title>
+</head>
+<body>
+
+	<h1>Create Patient</h1>
+		<form action="/patient/store/" method="post">
+			{% csrf_token %}
+		  
+		  <div>
+		    <label>Patient Name</label>
+		    <input type="text" name="Pname" >
+		  </div>
+		  <div>
+		    <label>Email address</label>
+		    <input type="email" name="Pemail">
+		  </div>
+		  <div>
+		    <label>Gender</label>
+		    <input type="text" name="Pgender">
+		  </div>
+		  <div>
+		    <label>DOB</label>
+		    <input type="text"  name="Pdob">
+		  </div>
+		  <div>
+		    <label>Contact</label>
+		    <input type="text"  name="Pcontact">
+		  </div>
+		  <button type="submit">Submit</button>
+		</form>
+
+</body>
+</html>

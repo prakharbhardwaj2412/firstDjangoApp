@@ -22,7 +22,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^register/', include('register.urls')),
     url(r'^Stocks/', views.StockList.as_view()),
-    
+    url(r'^patient/', include('patients.urls')),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

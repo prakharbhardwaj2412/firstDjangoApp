@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patient Update</title>
+</head>
+<body>
+
+	<h1>Update Patient</h1>
+		<form action="/patient/{{ patient.id }}/updated/" method="post">
+			{% csrf_token %}
+		  <div>
+		    <label>Patient Id</label>
+		    <input type="text" value="{{ patient.id }}" >
+		  </div>
+		  <div>
+		    <label>Patient Name</label>
+		    <input type="text" value="{{ patient.PATIENT_NAME }}" >
+		  </div>
+		  <div>
+		    <label>Email address</label>
+		    <input type="email"  value="{{ patient.EMAIL }}">
+		  </div>
+		  <div>
+		    <label>Gender</label>
+		    <input type="text" value="{{ patient.GENDER }}">
+		  </div>
+		  <div>
+		    <label>DOB</label>
+		    <input type="text"  value="{{ patient.DOB }}">
+		  </div>
+		  <div>
+		    <label>Contact</label>
+		    <input type="text"  value="{{ patient.CONTACT }}">
+		  </div>
+		  <div><button type="submit">Update</button></div>
+		</form>
+
+</body>
+</html>

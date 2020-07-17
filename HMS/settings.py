@@ -25,7 +25,7 @@ SECRET_KEY = '&#i3t0-4=k1lnd37a&t5%*=n1c9f4qd4$jm9no-mtfhohli#d&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.43.53', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'register.apps.RegisterConfig',
     'companies.apps.CompaniesConfig',
+    'patients.apps.PatientsConfig',
 ]
 
 MIDDLEWARE = [

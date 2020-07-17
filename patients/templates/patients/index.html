@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patient List</title>
+</head>
+<body>
+	<h1>Patient List</h1>
+	<a href="/patient/new/"><button>Create</button></a>
+	<ul>
+		{% for patient in patient_list %}
+		<li><a href="/patient/{{ patient.id }}">{{ patient.PATIENT_NAME }}</a>
+
+			<!-- delete -->
+			<!-- <form action="{% url 'register:patient-delete' patient.id %}" method="post" style="display: inline;">
+				{% csrf_token %}
+				<input type="hidden" name="patient_id" value="{{ patient.id }}">
+				<button type="submit" class="btn btn-default btn-sm">
+					delete
+				</button>
+			</form> -->
+			
+
+		</li>
+		{% endfor %}
+	</ul>
+
+</body>
+</html>
